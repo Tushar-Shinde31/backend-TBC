@@ -1,0 +1,15 @@
+Unit 1: Introduction to Backend 
+● What is backend development? 
+● Frontend vs Backend 
+● Power of JavaScript in backend 
+● Client-server architecture 
+● What is an API? 
+● REST API fundamentals 
+
+
+🧠 Mini Reflection Task: 
+Draw and explain client-server flow for a simple login form. 
+Outcomes: 
+● Understand the role of backend in web applications 
+● Explain client-server communication flow 
+● Define REST and explain how APIs work 
