@@ -1,0 +1,63 @@
+/* Container for the Home page content */
+.home-container {
+  padding: 2rem;                 /* Space inside the container */
+  max-width: 1200px;             /* Limit the width */
+  margin: 0 auto;                /* Center horizontally */
+  text-align: center;           /* Center text inside */
+}
+
+/* Main title of the Home page */
+.home-title {
+  font-size: 3rem;              /* Large font size */
+  margin-bottom: 1rem;          /* Space below the title */
+  color: #333;                  /* Dark grey color */
+}
+
+/* Description text under the title */
+.home-description {
+  font-size: 1.2rem;            /* Slightly larger than normal text */
+  color: #666;                  /* Medium grey text */
+  margin-bottom: 2rem;          /* Space below the description */
+}
+
+/* Container for buttons below the description */
+.home-buttons {
+  display: flex;                /* Display buttons in a row */
+  justify-content: center;     /* Center the buttons horizontally */
+  gap: 2rem;                    /* Space between buttons */
+}
+
+/* Style for the main (filled) button */
+.btn-primary {
+  padding: 1rem 2rem;           /* Padding inside the button */
+  background-color: #007bff;    /* Blue background */
+  color: white;                 /* White text */
+  border: none;                 /* No border */
+  border-radius: 5px;           /* Slightly rounded corners */
+  cursor: pointer;              /* Show pointer cursor on hover */
+  font-size: 1rem;              /* Standard button text size */
+  transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+/* Hover effect for the primary button */
+.btn-primary:hover {
+  background-color: #0056b3;   /* Darker blue on hover */
+}
+
+/* Style for the secondary (outlined) button */
+.btn-secondary {
+  padding: 1rem 2rem;           /* Same padding as primary */
+  background-color: transparent; /* Transparent background */
+  color: #007bff;               /* Blue text */
+  border: 2px solid #007bff;    /* Blue border */
+  border-radius: 5px;           /* Rounded corners */
+  cursor: pointer;              /* Pointer on hover */
+  font-size: 1rem;              /* Standard size */
+  transition: all 0.3s ease;    /* Smooth transition for all properties */
+}
+
+/* Hover effect for the secondary button */
+.btn-secondary:hover {
+  background-color: #007bff;    /* Fill with blue */
+  color: white;                 /* Change text to white */
+}
