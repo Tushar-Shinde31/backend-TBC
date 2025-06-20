@@ -1,0 +1,53 @@
+📘 Project Name: React Static App with Express Server
+
+🔗 Local Preview: http://localhost:3000
+
+🔗 Hosted Project: https://staticserver11.netlify.app/
+
+🎯 Objective:
+Demonstrate how to serve a React application built using Vite through a Node.js + Express backend. This project aligns with Unit 2's goal: serving static files using a custom server.
+
+🧠 Concepts Covered (Unit 2):
+▫ Serving static files with Express
+▫ React build process using Vite
+▫ Folder structuring for frontend-backend separation
+▫ Using Express middleware (`express.static`)
+▫ Handling wildcard routes to support client-side routing
+
+🛠️ Features Implemented:
+▫ A basic React UI created with Vite
+▫ Production-ready React build using `npm run build`
+▫ Express server (`server.js`) to serve the `dist/` folder
+▫ Wildcard route handling to support SPA routing
+▫ Clean file structure separating server logic from frontend code
+
+📂 Folder Structure:
+in-class-project/
+│
+├── dist/                          # Vite production build (after `npm run build`)
+├── node_modules/                  # Installed dependencies
+├── public/                        # Static public assets (favicon, etc.)
+├── src/                           # Source React components
+│   └── App.jsx                    # Main React component
+├── server.js                      # Express server file to serve static files
+├── index.html                     # Entry HTML for Vite
+├── package.json                   # Project metadata and dependencies
+└── vite.config.js                 # Vite configuration
+
+📦 Concepts Breakdown:
+🔹 Vite – Modern build tool used to scaffold and bundle the React project
+🔹 Express – Lightweight Node.js framework to serve the built static files
+🔹 `express.static` – Middleware that makes the `dist/` directory publicly accessible
+🔹 Wildcard `app.get('*')` – Ensures all routes point to `index.html` for SPA compatibility
+
+✅ Sample Output:
++--------------------------------------------------------+
+| Welcome to the React Static Server                    |
+| This React app is being served by a Node + Express backend |
++--------------------------------------------------------+
+
+📌 Run Instructions:
+1️⃣ Install dependencies: `npm install`
+2️⃣ Build frontend: `npm run build`
+3️⃣ Start server: `node server.js`
+4️⃣ Open in browser: http://localhost:3000

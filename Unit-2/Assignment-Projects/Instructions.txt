@@ -1,0 +1,59 @@
+📘 Project Name: Portfolio Website Server with Multiple Pages
+
+🔗 Local Preview: http://localhost:3000
+
+🔗 Hosted Project: https://reaport.netlify.app/
+
+🎯 Objective:
+Build a simple yet structured multi-page personal portfolio site using React and React Router, and serve the production build using a Node.js + Express server. This project reinforces the concept of serving static files and mirrors real-world deployment practices.
+
+🧠 Concepts Covered (Unit 2):
+▫ Serving Static Files with Express
+▫ React Production Build using Vite
+▫ Routing with React Router
+▫ Wildcard Routing for SPA support
+▫ Folder Structuring for Fullstack Projects
+▫ Fallback Route for 404 Pages
+
+🛠️ Features to Implement:
+▫ Home, About, and Projects pages
+▫ A shared navigation bar across all pages
+▫ Clean React component structure with React Router
+▫ Static build served via Express
+▫ 404 Page for unmatched routes
+
+📂 Folder Structure:
+assignment-project/
+│
+├── dist/                          # Vite build output (after `npm run build`)
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx             # Navigation menu across pages
+│   │   ├── Home.jsx               # Landing page content
+│   │   ├── About.jsx              # About section
+│   │   └── Projects.jsx           # Project showcase
+│   └── App.jsx                    # React Router setup
+├── public/
+│   └── favicon.ico                # Static icon
+├── server.js                      # Express server to serve static files
+├── package.json                   # Project dependencies and scripts
+└── vite.config.js                 # Vite bundler config
+
+📦 Concepts Breakdown:
+🔹 React Router – Used for multi-page navigation in the SPA
+🔹 Express Static – Makes the `dist/` folder accessible to the browser
+🔹 Wildcard Route – Handles deep linking by redirecting all routes to `index.html`
+🔹 Separation of Concerns – Clear separation of frontend components and server logic
+
+✅ Sample Output:
++-------------------------+        +------------------+
+| Home: Welcome message   |   -->  | /about page       |
++-------------------------+        +------------------+
+| About: Personal details |   -->  | /projects page    |
++-------------------------+        +------------------+
+
+📌 Run Instructions:
+1️⃣ Install dependencies: `npm install`
+2️⃣ Build frontend: `npm run build`
+3️⃣ Start server: `node server.js`
+4️⃣ Open in browser: http://localhost:3000
