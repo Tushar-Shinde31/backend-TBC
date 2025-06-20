@@ -1,0 +1,45 @@
+/* Styles for the contact form container */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  margin-bottom: 24px;
+}
+
+/* Styles for the name and email input fields */
+.input-name, .input-email {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  color: #ffff;
+}
+
+/* Highlight input border on focus */
+.input-name:focus, .input-email:focus {
+  border: 1.5px solid #6366f1;
+}
+
+/* Styles for the submit button */
+.submit-btn {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Change button color on hover */
+.submit-btn:hover {
+  background: #4f46e5;
+} 

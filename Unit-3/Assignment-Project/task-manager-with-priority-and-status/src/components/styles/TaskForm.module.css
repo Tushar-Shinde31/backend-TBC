@@ -1,0 +1,40 @@
+/* === CONTAINER FOR THE ENTIRE TASK FORM === */
+.taskForm {
+  display: flex;              /* Lay out elements in a row */
+  gap: 12px;                  /* Space between input, select, and button */
+  align-items: center;        /* Vertically center items */
+  margin-bottom: 18px;        /* Space below the form */
+}
+
+/* === TEXT INPUT FOR NEW TASK TITLE === */
+.taskInput {
+  flex: 1;                    /* Let it grow to fill available space */
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* === SELECT DROPDOWN FOR TASK PRIORITY OR STATUS === */
+.taskSelect {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* === BUTTON TO SUBMIT THE TASK === */
+.taskButton {
+  background: #1976d2;        /* Bright blue for CTA */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* === HOVER EFFECT FOR BUTTON === */
+.taskButton:hover {
+  background: #1565c0;        /* Slightly darker blue on hover */
+}

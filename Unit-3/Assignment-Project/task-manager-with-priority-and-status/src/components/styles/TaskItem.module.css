@@ -1,0 +1,60 @@
+/* === CARD-LIKE CONTAINER FOR A TASK === */
+.taskItem {
+  border: 1.5px solid #e0e0e0;           /* Soft border to define task box */
+  border-radius: 10px;                  /* Rounded corners for friendliness */
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);/* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                              /* Spacing between child elements */
+}
+
+/* === TASK TITLE (e.g., "Finish wireframes") === */
+.taskTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+/* === TASK METADATA (e.g., "High Priority" or "Due tomorrow") === */
+.taskMeta {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* === WRAPPER FOR EDIT + DELETE BUTTONS === */
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* === EDIT BUTTON STYLES === */
+.editBtn {
+  background: #e0f7fa;                  /* Soft teal background */
+  color: #00796b;                       /* Strong teal for text */
+  border: none;
+  border-radius: 5px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.editBtn:hover {
+  background: #b2ebf2;                  /* Slightly deeper on hover */
+}
+
+/* === DELETE BUTTON STYLES === */
+.deleteBtn {
+  background: #ffebee;                  /* Pale red background */
+  color: #c62828;                       /* Bold red for danger emphasis */
+  border: none;
+  border-radius: 5px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.deleteBtn:hover {
+  background: #ffcdd2;
+}

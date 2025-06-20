@@ -1,0 +1,28 @@
+/* === FILTER BAR CONTAINER === */
+.filterBar {
+  display: flex;                     /* Lay out children horizontally */
+  align-items: center;              /* Vertically center elements */
+  gap: 18px;                        /* Space between filter items */
+  margin-bottom: 18px;              /* Space below the filter bar */
+  background: #f5f5f5;              /* Soft gray background for contrast */
+  padding: 10px 18px;               /* Inner spacing */
+  border-radius: 8px;               /* Rounded corners for a soft UI */
+}
+
+/* === LABEL STYLING FOR EACH DROPDOWN === */
+.filterLabel {
+  font-weight: 500;                 /* Medium-bold font weight */
+  margin-right: 6px;                /* Space between label and select */
+  color: #222;                      /* Deep gray for readability */
+  font-size: 1rem;                  /* Base font size */
+}
+
+/* === SELECT DROPDOWN STYLING === */
+.filterSelect {
+  padding: 4px 10px;                /* Comfortable touch target */
+  border-radius: 5px;               /* Rounded edges */
+  border: 1px solid #ccc;           /* Subtle border for clarity */
+  background: #fff;                 /* White background for focus */
+  color: #222;                      /* Text color for readability */
+  font-size: 1rem;
+}
