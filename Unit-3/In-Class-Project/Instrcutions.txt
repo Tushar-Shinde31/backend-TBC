@@ -1,5 +1,0 @@
-📘 Project Name: Contact Manager
-
-🔗 Local Preview: http://localhost:3000
-
-🔗 Hosted Project: https://contactmana.netlify.app/
