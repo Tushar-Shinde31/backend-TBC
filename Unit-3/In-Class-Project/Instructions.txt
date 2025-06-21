@@ -1,0 +1,63 @@
+📘 Project Name: Task Manager API (In-Memory)
+
+🔗 Local Server: http://localhost:5000/api/tasks
+
+🎯 Objective:
+Build a basic Task Manager REST API using Express.js. This project introduces students to core CRUD operations, modular architecture (routes/controllers), and testing using Postman. No database is used — tasks are stored in-memory.
+
+🧠 Concepts Covered (Unit 3):
+▫ Express.js setup and server creation
+▫ RESTful API endpoints (CRUD)
+▫ Route and controller modularization
+▫ In-memory data storage using JS array
+▫ JSON request handling with express.json()
+▫ Testing API endpoints using Postman
+
+🛠️ Features Implemented:
+▫ Create new task
+▫ Read all tasks
+▫ Read a single task by ID
+▫ Update task by ID
+▫ Delete task by ID
+▫ Modular controller and routing structure
+▫ Sample Postman requests for testing
+
+📂 Folder Structure:
+InClass-TaskManager/
+│
+├── app.js                         # Entry point to set up Express server
+├── package.json                   # Node dependencies
+│
+├── data/
+│   └── tasks.js                   # In-memory task array
+│
+├── routes/
+│   └── taskRoutes.js              # Route definitions for tasks
+│
+└── controllers/
+    └── taskController.js          # Controller logic for each endpoint
+
+📦 Concepts Breakdown:
+🔹 Express Router – Organizing API routes in separate files
+🔹 Controllers – Logic separation from routing (clean code)
+🔹 Middleware – `express.json()` to parse request body
+🔹 In-memory Logic – Task storage without a database
+🔹 HTTP Methods – GET, POST, PUT, DELETE
+🔹 REST Principles – Clean endpoint design for resources
+
+✅ Sample Output (GET /api/tasks):
+[
+  {
+    "id": 1718940798759,
+    "title": "Learn Express.js"
+  },
+  {
+    "id": 1718940853902,
+    "title": "Practice Postman"
+  }
+]
+
+📌 Run Instructions:
+1️⃣ Install dependencies: `npm install`
+2️⃣ Start the server: `node app.js`
+3️⃣ Open Postman and test API: `http://localhost:5000/api/tasks`
