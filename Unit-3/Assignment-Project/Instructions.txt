@@ -1,0 +1,79 @@
+📘 Project Name: Advanced Task Manager API with Status & Filtering
+
+🔗 Local Server: http://localhost:5000/api/tasks
+
+🎯 Objective:
+Build an advanced REST API for managing tasks using Express.js. This project adds real-world features such as task status, priority, filtering, and bulk update functionality — all without a database.
+
+🧠 Concepts Covered (Unit 3):
+▫ REST API development with Express.js
+▫ Route and Controller Modularization
+▫ In-memory Data Storage
+▫ Advanced Query Parameter Filtering
+▫ Bulk Updates with Express Routes
+▫ Postman Testing and API Documentation
+
+🛠️ Features Implemented:
+▫ Create tasks with title, status, and priority
+▫ Read all tasks or filter using:
+   - `?status=pending`
+   - `?priority=high`
+   - `?search=keyword`
+▫ Read a task by ID
+▫ Update task details by ID
+▫ Delete a task by ID
+▫ Bulk mark all tasks as completed
+
+📂 Folder Structure:
+Assignment-TaskManager/
+│
+├── app.js                          # Entry point for Express app
+├── package.json                    # Node.js dependencies
+│
+├── data/
+│   └── tasks.js                    # In-memory array to store tasks
+│
+├── routes/
+│   └── taskRoutes.js               # Route definitions for all endpoints
+│
+└── controllers/
+    └── taskController.js           # Logic for handling requests
+
+📦 Concepts Breakdown:
+🔹 Modular Routing – Clean separation of logic and API paths
+🔹 Controller Pattern – Easier to manage and test logic
+🔹 Query Parameters – Powerful filtering and searching capabilities
+🔹 In-memory Logic – No DB needed, data stored in JS array
+🔹 Express Middleware – Body parsing using `express.json()`
+🔹 Postman Testing – Hands-on API validation
+
+✅ Sample Output (GET /api/tasks):
+[
+  {
+    "id": 1718962853920,
+    "title": "Submit Final Report",
+    "status": "pending",
+    "priority": "high"
+  },
+  {
+    "id": 1718962887410,
+    "title": "Test Postman Filters",
+    "status": "completed",
+    "priority": "medium"
+  }
+]
+
+📌 Run Instructions:
+1️⃣ Install dependencies: `npm install`
+2️⃣ Start the server: `node app.js`
+3️⃣ Open Postman and test API: `http://localhost:5000/api/tasks`
+
+🧪 Suggested Postman Tests:
+▫ POST /api/tasks → create new task
+▫ GET /api/tasks → get all tasks
+▫ GET /api/tasks?status=completed → filter by status
+▫ GET /api/tasks?priority=medium → filter by priority
+▫ GET /api/tasks?search=test → search by title keyword
+▫ PUT /api/tasks/:id → update a task
+▫ DELETE /api/tasks/:id → delete a task
+▫ PUT /api/tasks/complete-all → mark all tasks as completed
