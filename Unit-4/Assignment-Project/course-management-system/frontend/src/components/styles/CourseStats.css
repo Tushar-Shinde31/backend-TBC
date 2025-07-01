@@ -1,0 +1,23 @@
+.course-stats {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f3f4f6;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.course-stats h3 {
+  margin-top: 0;
+  color: #213547;
+}
+
+.course-stats ul {
+  list-style: disc inside;
+  padding-left: 0;
+}
+
+.course-stats li {
+  margin-bottom: 6px;
+  color: #333;
+} 
