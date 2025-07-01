@@ -1,0 +1,182 @@
+/* StudentItem.css - Individual student item styles */
+
+/* Card container for each student */
+.student-item {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top accent bar for each card */
+.student-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Card hover effect */
+.student-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Header row with student info and feedback button */
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Student info section */
+.student-info {
+  flex: 1;
+}
+
+/* Student name styling */
+.student-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+/* Student course badge */
+.student-course {
+  font-size: 1rem;
+  color: #667eea;
+  font-weight: 500;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* Button to toggle feedback form */
+.toggle-feedback-btn {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Feedback button hover effect */
+.toggle-feedback-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Section for feedback form and list */
+.feedback-section {
+  margin-top: 20px;
+}
+
+/* List of feedback items */
+.feedback-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual feedback item card */
+.feedback-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 4px solid #667eea;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Feedback content section */
+.feedback-content {
+  flex: 1;
+}
+
+/* Teacher name in feedback */
+.feedback-teacher {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+/* Feedback comment text */
+.feedback-comment {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Button to delete feedback */
+.delete-feedback-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Delete button hover effect */
+.delete-feedback-btn:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+/* Message when there is no feedback */
+.no-feedback {
+  text-align: center;
+  padding: 30px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .student-item {
+    padding: 20px;
+  }
+  
+  .student-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .student-name {
+    font-size: 1.2rem;
+  }
+  
+  .feedback-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .delete-feedback-btn {
+    align-self: flex-end;
+  }
+} 
