@@ -1,0 +1,71 @@
+/* 
+  Login.css
+  Styles for the Login page, including the login form and error messages.
+*/
+
+.login-container {
+  /* Container for the login form */
+  max-width: 400px;
+  margin: 48px auto;
+  text-align: center;
+  background: #f7f8fa;
+  padding: 32px 24px 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(100,108,255,0.04);
+}
+
+.login-container h2 {
+  /* Login page heading */
+  color: #646cff;
+  margin-bottom: 18px;
+}
+
+.login-form {
+  /* Layout for the login form fields */
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-form input {
+  /* Input fields styling */
+  padding: 10px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+.login-form input:focus {
+  /* Highlight input on focus */
+  border: 1.5px solid #646cff;
+  outline: none;
+}
+
+.login-form button {
+  /* Login button styling */
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form button:hover {
+  /* Button hover effect */
+  background: #535bf2;
+}
+
+.login-error {
+  /* Error message styling */
+  color: #f44336;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+}

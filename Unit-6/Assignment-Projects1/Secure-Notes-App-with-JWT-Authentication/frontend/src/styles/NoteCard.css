@@ -1,0 +1,66 @@
+/* 
+  NoteCard.css
+  Styles for the NoteCard component, which displays individual notes with edit and delete actions.
+*/
+
+.note-card {
+  /* Container for each note card */
+  padding: 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 8px;
+  transition: box-shadow 0.2s;
+}
+
+.note-card:hover {
+  /* Elevate card on hover for better UX */
+  box-shadow: 0 4px 16px rgba(100,108,255,0.10);
+}
+
+.note-card h3 {
+  /* Note title styling */
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #2d2d2d;
+}
+
+.note-card p {
+  /* Note content styling */
+  margin: 0 0 12px 0;
+  color: #444;
+}
+
+.note-card-actions {
+  /* Container for action buttons (Edit, Delete) */
+  display: flex;
+  gap: 10px;
+}
+
+.note-card-actions button {
+  /* Base styles for action buttons */
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #646cff;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.note-card-actions button:hover {
+  /* Button hover effect */
+  background: #535bf2;
+}
+
+.note-card-delete {
+  /* Delete button specific color */
+  background: #f44336;
+}
+
+.note-card-delete:hover {
+  /* Delete button hover color */
+  background: #d32f2f;
+}

@@ -1,0 +1,39 @@
+/* Main dashboard container styles */
+.dashboard-container {
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(100,108,255,0.07);
+  max-width: 420px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Message shown when user is not logged in */
+.dashboard-login-msg {
+  color: #646cff;
+  font-size: 1.2rem;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Profile image styles on dashboard */
+.dashboard-profile-img {
+  width: 110px;
+  border-radius: 14px;
+  margin-top: 18px;
+  box-shadow: 0 2px 12px rgba(100,108,255,0.10);
+  border: 2px solid #646cff;
+}
+
+/* Dashboard heading styles */
+.dashboard-container h2 {
+  margin-bottom: 10px;
+  color: #535bf2;
+}
+
+/* Dashboard paragraph styles */
+.dashboard-container p {
+  color: #3b3b3b;
+  font-size: 1.05rem;
+}

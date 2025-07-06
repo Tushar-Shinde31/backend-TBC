@@ -1,0 +1,95 @@
+📘 Project Name: Secure Notes App with JWT Authentication
+
+🔗 Local Backend: http://localhost:5000
+🔗 Local Frontend: http://localhost:5173
+🔗 Host Link: https://secure-notes-app-with-jwt-authentic.vercel.app/login
+
+🎯 Objective:
+Build a secure full-stack application where users can register, log in, and manage their personal notes. The app uses JWT for authentication and allows full CRUD operations on notes.
+
+🧠 Concepts Covered (Unit 6):
+▫ JWT Authentication and Authorization
+▫ Protected API Routes
+▫ Token-based Session Handling in React Context API
+▫ Secure CRUD Operations with MongoDB and Express
+▫ Conditional Rendering based on Auth State
+▫ Frontend Routing with React Router
+▫ Note-based State Management in React
+▫ Clean Backend Architecture (Controllers, Routes, Middleware, Models)
+
+🛠️ Features Implemented:
+▫ User Registration with email and password
+▫ User Login with token returned and saved
+▫ Authenticated CRUD for Notes (Create, Read, Update, Delete)
+▫ AuthContext to persist token and user globally
+▫ Protected routes for Dashboard and Notes page
+▫ Logout functionality with token clearance
+▫ Frontend error handling and form validation
+▫ Backend password hashing with bcrypt and JWT token generation
+
+📂 Folder Structure:
+
+backend/
+├── config/db.js                      # MongoDB connection logic
+├── models/User.js                   # Mongoose User model
+├── models/Note.js                   # Mongoose Note model
+├── controllers/
+│   ├── authController.js            # Register & login logic
+│   └── noteController.js            # CRUD operations for notes
+├── routes/
+│   ├── authRoutes.js                # Auth API endpoints
+│   └── noteRoutes.js                # Note API endpoints (protected)
+├── middleware/authMiddleware.js     # JWT token verification
+├── server.js                        # Express app entry
+└── .env                             # Environment variables
+
+frontend/
+└── src/
+    ├── App.jsx                      # App with React Router
+    ├── main.jsx                     # Entry point
+    ├── context/
+    │   └── AuthContext.jsx          # Manages login state & token
+    ├── pages/
+    │   ├── Login.jsx                # Login form page
+    │   ├── Register.jsx             # Registration form
+    │   ├── Dashboard.jsx            # Welcome page
+    │   └── Notes.jsx                # Full notes CRUD interface
+    ├── components/
+    │   ├── Navbar.jsx               # Header with login/logout
+    │   └── NoteCard.jsx             # Reusable component to display each note
+
+📦 Concepts Breakdown:
+🔹 JWT – Secures API access and routes
+🔹 bcrypt – Encrypts user passwords before saving
+🔹 AuthContext – Manages token and user info in React
+🔹 Protected Routes – Notes & Dashboard available only after login
+🔹 Axios – Makes secure API requests with Authorization header
+🔹 useState/useEffect – Manage component state & data fetching
+
+✅ Sample API Endpoints:
+✔ POST   /api/auth/register          → Register user
+✔ POST   /api/auth/login             → Login and return token
+✔ GET    /api/notes                  → Get all notes (protected)
+✔ POST   /api/notes                  → Add a new note
+✔ PUT    /api/notes/:id              → Update note by ID
+✔ DELETE /api/notes/:id              → Delete note by ID
+
+📌 Run Instructions:
+
+🔧 Backend:
+1️⃣ Navigate to backend folder: `cd backend`
+2️⃣ Install dependencies: `npm install`
+3️⃣ Set environment variables in `.env`
+4️⃣ Start backend server: `npm run dev`
+
+🔧 Frontend:
+1️⃣ Navigate to frontend folder: `cd frontend`
+2️⃣ Install dependencies: `npm install`
+3️⃣ Start Vite server: `npm run dev`
+4️⃣ Open in browser: http://localhost:5173
+
+🛡️ Notes:
+• All /api/notes routes require `Authorization: Bearer <token>`
+• Use `AuthContext` to control login/logout state
+• Logout clears localStorage and redirects to login
+• User can only access their own notes

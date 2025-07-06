@@ -1,0 +1,92 @@
+/* === NAVBAR WRAPPER === */
+.navbar {
+  display: flex;                                       /* Arrange nav items in a row */
+  align-items: center;                                 /* Vertically center contents */
+  justify-content: flex-start;                         /* Align items to the left */
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #6366f1, #60a5fa);/* Soft purple → blue gradient */
+  border-bottom: 1px solid #27272a;                    /* Subtle dark divider */
+  box-shadow: 0 4px 24px rgba(99,102,241,0.10);        /* Gentle glow */
+  gap: 16px;                                           /* Spacing between nav items */
+  position: sticky;                                    /* Sticks to top while scrolling */
+  top: 0;
+  z-index: 10;                                         /* Ensures it's above other content */
+}
+
+/* === BASE STYLES FOR NAVIGATION LINKS === */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+  overflow: hidden;
+}
+
+/* === UNDERLINE ANIMATION EFFECT ON HOVER === */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f472b6, #a5b4fc);/* Pink to indigo stripe */
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.nav-link:hover::after,
+.logout-btn:hover::after {
+  width: 100%; /* Expand underline fully on hover */
+}
+
+/* === ON HOVER: BACKGROUND GLOW AND PINK TEXT === */
+.nav-link:hover,
+.logout-btn:hover {
+  background: rgba(255,255,255,0.08);   /* Frosted glass feel */
+  color: #f472b6;                       /* Attention-grabbing pink */
+}
+
+/* === ICON SIZING FOR NAV ITEMS === */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* === STYLES FOR LOGOUT BUTTON === */
+.logout-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+  overflow: hidden;
+}
+
+/* === UNDERLINE EFFECT FOR LOGOUT BUTTON === */
+.logout-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f472b6, #a5b4fc);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(.4,0,.2,1);
+}

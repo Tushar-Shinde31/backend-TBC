@@ -1,0 +1,78 @@
+/* Navbar main container styles */
+.navbar {
+  padding: 14px 32px;
+  border-bottom: 1.5px solid #e0e0e0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* Navbar title styles */
+.navbar-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #3b3b3b;
+  letter-spacing: 1px;
+}
+
+/* Right section of navbar (login/user info) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* User info container when logged in */
+.navbar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f6ff;
+  border-radius: 24px;
+  padding: 4px 16px 4px 8px;
+  box-shadow: 0 2px 8px rgba(100,108,255,0.07);
+  transition: box-shadow 0.2s;
+}
+
+/* User info hover effect */
+.navbar-user-info:hover {
+  box-shadow: 0 4px 16px rgba(100,108,255,0.13);
+}
+
+/* Profile image styles in navbar */
+.navbar-profile-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-right: 4px;
+  border: 2px solid #646cff;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(100,108,255,0.08);
+}
+
+/* Username styles in navbar */
+.navbar-username {
+  margin-right: 8px;
+  font-weight: 500;
+  color: #646cff;
+  font-size: 1.05rem;
+}
+
+/* Logout button styles */
+.navbar button {
+  background: linear-gradient(90deg, #646cff 0%, #535bf2 100%);
+  color: #fff;
+  border: none;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Logout button hover effect */
+.navbar button:hover {
+  background: linear-gradient(90deg, #535bf2 0%, #646cff 100%);
+}
