@@ -4,6 +4,8 @@
 
 🔗 Backend API: http://localhost:5000/api
 
+🔗 Host Link: https://movie-recommendation-vault.vercel.app/
+
 🎯 Objective:
 Build a secure and dynamic movie recommendation platform where authenticated users (via Google OAuth) can add, vote, comment, and explore movie suggestions from others. This project demonstrates full-stack development with user authentication, protected routes, and dynamic UI.
 
