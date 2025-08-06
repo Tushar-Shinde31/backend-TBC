@@ -1,0 +1,227 @@
+/* === AddMovie.css === */
+/* Container for the Add Movie page */
+.add-movie-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 80px); /* Ensures full height minus header/footer */
+}
+
+/* Header section: title + subtitle */
+.add-movie-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Main title with gradient text effect */
+.add-movie-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle below the title */
+.add-movie-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Form container styling */
+.add-movie-form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+/* Wrapper for each form field */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Label for inputs/selects/textarea */
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Shared styles for input, textarea, and select fields */
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #374151;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Focus state for inputs */
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Hover state for inputs */
+.form-input:hover,
+.form-textarea:hover,
+.form-select:hover {
+  border-color: #d1d5db;
+}
+
+/* Textarea-specific styles */
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Placeholder text color */
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Two-column layout for grouped fields */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Submit button styling */
+.form-submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+/* Hover effect for submit button */
+.form-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* Active (pressed) state */
+.form-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Disabled state */
+.form-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error message styling */
+.form-error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Success message styling */
+.form-success {
+  color: #059669;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Optional help text below fields */
+.form-help-text {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Poster image preview section */
+.poster-preview {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Poster image styling */
+.poster-preview img {
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .add-movie-container {
+    padding: 1rem;
+  }
+
+  .add-movie-title {
+    font-size: 1.75rem;
+  }
+
+  .add-movie-form {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-movie-title {
+    font-size: 1.5rem;
+  }
+
+  .add-movie-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .add-movie-form {
+    padding: 1rem;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .form-submit-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}

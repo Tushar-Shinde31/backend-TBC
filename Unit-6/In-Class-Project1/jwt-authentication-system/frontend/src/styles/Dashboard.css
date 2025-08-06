@@ -1,0 +1,67 @@
+/* === OUTER DASHBOARD CONTAINER === */
+.dashboard-container {
+  max-width: 600px;                            /* Limit width for readability */
+  margin: 48px auto;                           /* Center vertically with spacing */
+  padding: 32px 24px;
+  background: rgba(24,24,27,0.97);             /* Deep near-black base */
+  border-radius: 16px;
+  box-shadow:                                   /* Subtle neon-like aura */
+    0 8px 32px 0 rgba(99,102,241,0.18), 
+    0 1.5px 8px 0 rgba(244,114,182,0.10);
+  text-align: center;
+  position: relative;
+  overflow: hidden;                            /* Hide animated gradient overflow */
+}
+
+/* === DASHBOARD HEADING STYLE === */
+.dashboard-title {
+  color: #fff;
+}
+
+/* === ANIMATED BACKDROP BEHIND THE CONTAINER === */
+.dashboard-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(120deg, #f472b6 0%, #60a5fa 100%);
+  opacity: 0.12;                               /* Soft light wash */
+  pointer-events: none;                        /* Avoid intercepting clicks */
+  animation: dashboard-bg-move 8s linear infinite alternate;
+}
+
+@keyframes dashboard-bg-move {
+  0%   { filter: blur(0px) brightness(1); }
+  100% { filter: blur(2px) brightness(1.1); }   /* Animate soft glow for liveliness */
+}
+
+/* === CARD THAT HOLDS STATUS TEXT (e.g. Auth message) === */
+.dashboard-card {
+  margin-top: 24px;
+  padding: 24px 18px;
+  background: #23232b;                         /* Slightly lighter than container */
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2.5px solid;                         /* Gradient border with fallback */
+  border-image: linear-gradient(90deg, #f472b6 0%, #60a5fa 100%) 1;
+
+  transition: box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+  z-index: 1;                                  /* Layer above background gradient */
+}
+
+/* === CARD HOVER EFFECT === */
+.dashboard-card:hover {
+  box-shadow:
+    0 8px 32px 0 rgba(244,114,182,0.18),
+    0 2px 12px 0 rgba(99,102,241,0.18);
+  border-image: linear-gradient(90deg, #60a5fa 0%, #f472b6 100%) 1;
+}

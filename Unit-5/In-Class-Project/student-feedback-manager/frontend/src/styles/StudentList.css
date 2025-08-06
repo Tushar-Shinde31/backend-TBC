@@ -1,0 +1,74 @@
+/* StudentList.css - Student list component styles */
+
+/* Main grid container for the list of students */
+.student-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Header section for the student list */
+.student-list-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Title of the student list with gradient text */
+.student-list-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Displays the number of students */
+.student-count {
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: 400;
+}
+
+/* Empty state container when there are no students */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+}
+
+/* Icon for the empty state */
+.empty-state-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+/* Main text for the empty state */
+.empty-state-text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Subtext for the empty state */
+.empty-state-subtext {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .student-list {
+    gap: 15px;
+  }
+  
+  .student-list-title {
+    font-size: 1.5rem;
+  }
+  
+  .empty-state {
+    padding: 40px 20px;
+  }
+} 

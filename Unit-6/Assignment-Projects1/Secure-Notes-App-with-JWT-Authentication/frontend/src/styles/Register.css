@@ -1,0 +1,66 @@
+/* === OUTER CONTAINER FOR REGISTRATION FORM === */
+.register-container {
+  max-width: 400px;                                /* Limit width for readability */
+  margin: 48px auto;                               /* Center horizontally with top spacing */
+  text-align: center;
+  background: #f7f8fa;                             /* Soft off-white background */
+  padding: 32px 24px 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(100,108,255,0.04);    /* Subtle indigo glow */
+}
+
+/* === HEADING STYLE === */
+.register-container h2 {
+  color: #646cff;                                  /* Indigo accent */
+  margin-bottom: 18px;
+}
+
+/* === FORM LAYOUT === */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;                                       /* Space between inputs */
+}
+
+/* === INPUT FIELD STYLING === */
+.register-form input {
+  padding: 10px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+/* === INPUT FOCUS STATE === */
+.register-form input:focus {
+  border: 1.5px solid #646cff;                    /* Indigo border on focus */
+  outline: none;
+}
+
+/* === SUBMIT BUTTON === */
+.register-form button {
+  background: #646cff;                            /* Indigo background */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* === BUTTON HOVER STATE === */
+.register-form button:hover {
+  background: #535bf2;                            /* Slightly darker indigo */
+}
+
+/* === ERROR MESSAGE STYLING === */
+.register-error {
+  color: #f44336;                                 /* Bright red for visibility */
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+}

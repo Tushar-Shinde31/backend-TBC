@@ -1,0 +1,165 @@
+/* === CommentSection.css === */
+
+/* Main wrapper for the comment section */
+.comment-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb; /* Light gray divider */
+}
+
+/* Section heading (e.g., "Comments") */
+.comment-section h4 {
+  color: #1f2937; /* Dark gray */
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Wrapper for the list of comments */
+.comment-list {
+  margin-bottom: 1.5rem;
+}
+
+/* Individual comment card */
+.comment-item {
+  background: #f9fafb; /* Light background */
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  border-left: 3px solid #667eea; /* Indigo accent bar */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for comment card */
+.comment-item:hover {
+  background: #f3f4f6;
+  transform: translateX(2px); /* Slight shift on hover */
+}
+
+/* Author name styling */
+.comment-author {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+/* Comment text content */
+.comment-text {
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Form layout for adding a comment */
+.comment-form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-end;
+}
+
+/* Textarea input for comment */
+.comment-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  resize: vertical;
+  min-height: 40px;
+  max-height: 120px;
+}
+
+/* Focus state for comment input */
+.comment-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Placeholder text color */
+.comment-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Submit button for posting a comment */
+.comment-submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Hover effect for submit button */
+.comment-submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Active (pressed) state */
+.comment-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Disabled state */
+.comment-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Message shown when there are no comments */
+.no-comments {
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px dashed #d1d5db;
+}
+
+/* === Responsive Design === */
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .comment-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .comment-submit-btn {
+    align-self: flex-end;
+    width: fit-content;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .comment-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .comment-item {
+    padding: 0.75rem;
+  }
+
+  .comment-input {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .comment-submit-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.875rem;
+  }
+}

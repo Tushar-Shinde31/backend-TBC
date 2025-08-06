@@ -1,0 +1,79 @@
+📘 Project Name: Simple Auth System (JWT Based)
+
+🔗 Local Backend: http://localhost:5000/api/auth  
+🔗 Local Frontend: http://localhost:5173
+🔗Host Link: https://simple-auth-system.vercel.app/
+
+🎯 Objective:
+Build a secure authentication system using JWT (JSON Web Token) that allows users to register, log in, and access protected resources. This project demonstrates backend security and frontend state management using React Context.
+
+🧠 Concepts Covered (Unit 6):
+▫ JWT authentication with protected API routes
+▫ User model with hashed passwords using bcrypt
+▫ Token storage in localStorage
+▫ Global authentication state using Context API
+▫ Route navigation using React Router
+▫ API interaction using Axios
+
+🛠️ Features Implemented:
+▫ User registration with hashed password
+▫ User login with token generation
+▫ Token saved and shared via Context
+▫ Access protected API route from frontend
+▫ Dynamic navbar with login/logout control
+▫ Error handling and navigation
+
+📂 Backend Structure:
+backend/
+├── config/db.js                   # MongoDB connection
+├── models/User.js                # User schema
+├── routes/authRoutes.js          # Login/Register + Protected route
+├── controllers/authController.js # Logic for auth handling
+├── middleware/authMiddleware.js  # Token verification
+├── server.js                     # Main Express server
+└── .env                          # Secrets and DB URI
+
+📂 Frontend Structure:
+frontend/src/
+├── App.jsx                       # App with routing setup
+├── main.jsx                      # Entry point
+├── context/AuthContext.jsx       # Auth token handling via Context
+├── components/Navbar.jsx         # Navbar with auth-based rendering
+└── pages/
+    ├── Register.jsx              # Registration page
+    ├── Login.jsx                 # Login form
+    └── Dashboard.jsx             # Protected dashboard page
+
+✅ Sample Output:
++-----------------------------+
+| Register Successful         |
+| Login -> Token stored       |
+| Dashboard: "You are logged in!" |
++-----------------------------+
+
+📌 Run Instructions:
+
+🔹 Backend:
+1️⃣ `cd backend`
+2️⃣ Create `.env`:
+    MONGO_URI=mongodb://127.0.0.1:27017/auth_demo  
+    JWT_SECRET=supersecretkey  
+    PORT=5000
+3️⃣ `npm install`
+4️⃣ `npm run dev`
+
+🔹 Frontend:
+1️⃣ `cd frontend`
+2️⃣ `npm install`
+3️⃣ `npm run dev`
+4️⃣ Open browser: http://localhost:5173
+
+🧪 Thunder Client Testing:
+▫ `POST /api/auth/register` – Register new user  
+▫ `POST /api/auth/login` – Get JWT token  
+▫ `GET /api/auth/protected` – Access protected route (Header: `Authorization: Bearer <token>`)
+
+📚 Tips for Teachers:
+- Highlight password hashing vs plain storage
+- Demonstrate how Context API enables secure session flow
+- Compare protected vs unprotected endpoints

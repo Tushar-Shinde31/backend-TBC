@@ -1,0 +1,192 @@
+/* === MovieCard.css === */
+
+/* Main card container for each movie */
+.movie-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for movie card */
+.movie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+/* Header section: poster + info */
+.movie-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Movie poster image */
+.movie-poster {
+  width: 120px;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Zoom effect on poster hover */
+.movie-poster:hover {
+  transform: scale(1.05);
+}
+
+/* Wrapper for movie details */
+.movie-info {
+  flex: 1;
+}
+
+/* Movie title */
+.movie-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+/* Release year */
+.movie-year {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Genre badge */
+.movie-genre {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+/* Movie description text */
+.movie-description {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+/* Author (submitted by) text */
+.movie-author {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Highlight author name */
+.movie-author strong {
+  color: #374151;
+}
+
+/* Voting section (upvote/downvote) */
+.vote-section {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  align-items: center;
+}
+
+/* Base style for vote buttons */
+.vote-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+/* Upvote button style */
+.vote-btn.upvote {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* Upvote hover effect */
+.vote-btn.upvote:hover:not(:disabled) {
+  background-color: #bbf7d0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(34, 197, 94, 0.2);
+}
+
+/* Downvote button style */
+.vote-btn.downvote {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Downvote hover effect */
+.vote-btn.downvote:hover:not(:disabled) {
+  background-color: #fecaca;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.2);
+}
+
+/* Disabled vote button */
+.vote-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Vote count display */
+.vote-count {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* === Responsive Design === */
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .movie-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .movie-poster {
+    width: 100px;
+    height: 150px;
+  }
+
+  .vote-section {
+    justify-content: center;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .movie-card {
+    padding: 1rem;
+  }
+
+  .movie-title {
+    font-size: 1.25rem;
+  }
+
+  .vote-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

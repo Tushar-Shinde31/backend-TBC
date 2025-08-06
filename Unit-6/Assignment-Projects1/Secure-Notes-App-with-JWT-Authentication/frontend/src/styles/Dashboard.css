@@ -1,0 +1,49 @@
+/* === DASHBOARD WRAPPER === */
+.dashboard-container {
+  text-align: center;
+  margin-top: 60px;
+  background: #f7f8fa; /* Soft off-white background */
+  padding: 40px 0 32px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(100,108,255,0.04); /* Subtle indigo glow */
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto; /* Center horizontally */
+}
+
+/* === DASHBOARD HEADING === */
+.dashboard-container h2 {
+  color: #646cff; /* Indigo accent */
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+
+/* === PARAGRAPH TEXT (e.g., welcome message) === */
+.dashboard-container p {
+  color: #444;
+  margin: 6px 0;
+  font-size: 1.1rem;
+}
+
+/* === CTA BUTTON TO CREATE NOTES === */
+.dashboard-create-notes-btn {
+  margin-top: 28px;
+  padding: 14px 36px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #646cff 0%, #535bf2 100%);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(100,108,255,0.10);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  letter-spacing: 1px;
+}
+
+/* === BUTTON HOVER EFFECT === */
+.dashboard-create-notes-btn:hover {
+  background: linear-gradient(90deg, #535bf2 0%, #646cff 100%);
+  transform: translateY(-2px) scale(1.03); /* Slight lift */
+  box-shadow: 0 8px 24px rgba(100,108,255,0.18);
+}

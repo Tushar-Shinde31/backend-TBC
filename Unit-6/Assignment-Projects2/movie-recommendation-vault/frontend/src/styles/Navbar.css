@@ -1,0 +1,157 @@
+/* === Navbar.css === */
+
+/* Main navbar container with gradient background and sticky positioning */
+.navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+/* Inner container to center content and space items */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand/logo link */
+.navbar-brand {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for brand */
+.navbar-brand:hover {
+  color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* Navigation links container */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* User info section (name + avatar) */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* User avatar image */
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for avatar */
+.user-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* Base style for navigation links */
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for nav links */
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Special styling for "Add Movie" button */
+.nav-link.add-movie {
+  background-color: #4ade80;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Hover effect for "Add Movie" */
+.nav-link.add-movie:hover {
+  background-color: #22c55e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);
+}
+
+/* Logout button styling */
+.logout-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for logout button */
+.logout-btn:hover {
+  background-color: #ffffff;
+  color: #667eea;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* === Responsive Design === */
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

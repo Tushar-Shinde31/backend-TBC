@@ -1,0 +1,98 @@
+/* === NAVBAR CONTAINER === */
+.navbar {
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid #e0e0e0;
+  background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  box-shadow: 0 8px 32px rgba(100,108,255,0.08); /* Soft indigo glow */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  border-radius: 0 0 18px 18px;
+  transition: background 0.3s, box-shadow 0.3s, border 0.3s;
+  z-index: 10;
+}
+
+/* === LEFT & RIGHT NAV GROUPS === */
+.navbar-left,
+.navbar-right {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+/* === BRAND / LOGO LINK === */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.45rem;
+  text-decoration: none;
+  color: #2d2d2d;
+  letter-spacing: 1.5px;
+  margin-right: 14px;
+  transition: color 0.2s;
+}
+.navbar-brand:hover {
+  color: #646cff;
+}
+
+/* === GENERIC NAV LINKS === */
+.navbar-link {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  padding: 7px 20px;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+/* === SPECIAL STYLING FOR THE 'Notes' BUTTON === */
+.navbar-left .navbar-link[href="/notes"] {
+  background: linear-gradient(90deg, #646cff, #535bf2);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(100,108,255,0.10);
+  border: none;
+}
+.navbar-left .navbar-link[href="/notes"]:hover {
+  background: linear-gradient(90deg, #535bf2, #646cff);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(100,108,255,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* === HOVER EFFECT FOR OTHER LINKS === */
+.navbar-link:hover {
+  color: #646cff;
+  background: #f0f3ff;
+}
+
+/* === USERNAME DISPLAY === */
+.navbar-user {
+  font-weight: bold;
+  color: #646cff;
+  margin-right: 8px;
+  font-size: 1.08rem;
+}
+
+/* === LOGOUT BUTTON === */
+.navbar-logout {
+  padding: 7px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #f44336; /* Bright red */
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(244,67,54,0.10);
+}
+.navbar-logout:hover {
+  background: #d32f2f; /* Darker red on hover */
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(244,67,54,0.18);
+}

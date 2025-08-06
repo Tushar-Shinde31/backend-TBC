@@ -1,0 +1,78 @@
+📘 Project Name: Student Feedback Manager
+
+🔗 Local Frontend: http://localhost:5173  
+🔗 Local Backend: http://localhost:5000/api/students
+
+🎯 Objective:
+Build a full-stack web application to manage students and their feedback. This project teaches nested data handling, CRUD operations, and communication between components using React and Express with MongoDB.
+
+🧠 Concepts Covered (Unit 5):
+▫ MongoDB nested schema (feedback inside student)
+▫ REST API with nested routes (POST, DELETE feedback)
+▫ Express routing and controller separation
+▫ React useState, useEffect for state management
+▫ Controlled components for forms
+▫ Component communication using props
+▫ Data fetching with axios
+
+🛠️ Features Implemented:
+▫ Add a new student with name and course
+▫ Display list of all students
+▫ Add feedback to individual students (teacher, comment)
+▫ View all feedbacks associated with a student
+▫ Delete a specific feedback from a student
+▫ Clean and modular component structure
+
+📂 Backend Structure:
+backend/
+├── config/db.js                   # MongoDB connection
+├── models/Student.js             # Student model with nested feedback schema
+├── routes/studentRoutes.js       # Route definitions
+├── controllers/studentController.js  # Business logic
+├── server.js                     # Express server
+└── .env                          # MongoDB URI and PORT
+
+📂 Frontend Structure:
+frontend/
+├── App.jsx                       # Main app logic and state
+├── main.jsx                      # Entry point
+└── components/
+    ├── StudentForm.jsx           # Form to add a new student
+    ├── FeedbackForm.jsx          # Form to submit feedback
+    ├── StudentList.jsx           # Renders list of students
+    └── StudentItem.jsx           # Student with feedback actions
+
+✅ Sample Output:
++---------------------------------------------------+
+| 👩 Ananya Sharma (AI & ML)                         |
+| ➕ [Add Feedback]                                  |
+| 🗣️ Mr. Raj: Great presentation. [❌]              |
++---------------------------------------------------+
+
+📌 Run Instructions:
+
+🔹 Backend:
+1️⃣ `cd backend`
+2️⃣ Create `.env` file with:
+    MONGO_URI=mongodb://127.0.0.1:27017/student_feedback  
+    PORT=5000
+3️⃣ `npm install`
+4️⃣ `npm run dev`
+
+🔹 Frontend:
+1️⃣ `cd frontend`
+2️⃣ `npm install`
+3️⃣ `npm run dev`
+4️⃣ Open browser: http://localhost:5173
+
+🧪 API Endpoints for Thunder Client:
+▫ `POST /api/students` – Add new student  
+▫ `GET /api/students` – Get all students  
+▫ `POST /api/students/:id/feedback` – Add feedback to a student  
+▫ `DELETE /api/students/:id/feedback/:index` – Delete feedback at index
+
+📚 Tips for Teachers:
+- Demonstrate how nested arrays (feedback) work inside MongoDB documents.
+- Use Thunder Client/Postman to inspect API behavior before building UI.
+- Emphasize the flow of props and controlled inputs in React.
+

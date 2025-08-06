@@ -1,0 +1,93 @@
+/* === PAGE BACKGROUND === */
+body {
+  background: linear-gradient(120deg, #f472b6 0%, #60a5fa 100%); /* Pink to blue gradient */
+  min-height: 100vh;                                             /* Full viewport height */
+}
+
+/* === LOGIN FORM CONTAINER === */
+.login-container {
+  max-width: 400px;                                              /* Limit container width */
+  margin: 48px auto;                                             /* Center horizontally with top spacing */
+  padding: 32px 24px;
+  background: rgba(24,24,27,0.95);                               /* Nearly black with opacity */
+  border-radius: 16px;
+  box-shadow:
+    0 8px 32px 0 rgba(99,102,241,0.18),                          /* Glow with violet and pink */
+    0 1.5px 8px 0 rgba(244,114,182,0.10);
+  text-align: center;
+  transition: box-shadow 0.3s;                                   /* Smooth glow on hover */
+}
+
+/* === TITLE INSIDE THE LOGIN CONTAINER === */
+.login-title {
+  color: #fff;
+}
+
+/* === ON HOVER: Enhance glow effect === */
+.login-container:hover {  
+  box-shadow:
+    0 12px 40px 0 rgba(99,102,241,0.28),
+    0 2px 12px 0 rgba(244,114,182,0.18);
+}
+
+/* === FORM LAYOUT: VERTICAL STACK === */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;                                                     /* Space between input fields */
+}
+
+/* === INPUT FIELDS === */
+.login-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.5px solid #a5b4fc;                                   /* Indigo border */
+  background: #23232b;                                           /* Dark input background */
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(99,102,241,0.08);                   /* Light glow */
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+/* === INPUT FOCUS STATE === */
+.login-form input:focus {
+  border: 2px solid #f472b6;                                     /* Pink border */
+  background: #18181b;                                           /* Slightly darker focus shade */
+  box-shadow: 0 2px 8px rgba(244,114,182,0.12);                  /* Enhanced glow */
+}
+
+/* === SUBMIT BUTTON STYLING === */
+.login-form button {
+  background: linear-gradient(90deg, #f472b6 0%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+  transition: background 0.2s, transform 0.1s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* === PRESSING THE BUTTON SHRINKS SLIGHTLY === */
+.login-form button:active {
+  transform: scale(0.97);
+}
+
+/* === BUTTON HOVER REVERSES THE GRADIENT === */
+.login-form button:hover {
+  background: linear-gradient(90deg, #60a5fa 0%, #f472b6 100%);
+}
+
+/* === ERROR MESSAGE DISPLAY === */
+.login-error {
+  color: #f87171;                                                /* Soft red */
+  margin-top: 12px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}

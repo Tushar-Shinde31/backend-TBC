@@ -1,0 +1,71 @@
+📘 Project Name: Google OAuth Authentication System
+
+🔗 Local Frontend: http://localhost:5173  
+🔗 Local Backend: http://localhost:5000/api/auth/google-login
+🔗 Host Link: https://google-o-auth-authentication-system.vercel.app/
+
+🎯 Objective:
+Build an authentication system using Google OAuth 2.0 and JSON Web Tokens (JWT), enabling users to log in with their Google account and securely access a protected dashboard.
+
+🧠 Concepts Covered (Unit 6 – In-Class Project 2):
+▫ Google OAuth 2.0 Flow with `@react-oauth/google`  
+▫ Backend verification of Google ID token via `google-auth-library`  
+▫ MongoDB persistence of user profile  
+▫ JWT token generation and handling  
+▫ React Context API for managing auth state  
+▫ Conditional rendering and session handling in React
+
+🛠️ Features Implemented:
+▫ Google Sign-In with automatic account creation  
+▫ JWT issued from backend after token verification  
+▫ Auth token & user info stored in localStorage  
+▫ Context API manages login/logout state  
+▫ Dashboard displays logged-in user's info  
+▫ Protected access to Dashboard with fallback for unauthenticated users  
+▫ Logout clears localStorage and session
+
+📂 Backend Structure:
+backend/
+├── config/db.js                     # MongoDB connection
+├── models/User.js                   # User schema
+├── controllers/authController.js    # Google token verification + JWT
+├── routes/authRoutes.js             # Route for /google-login
+├── server.js                        # Main Express app
+└── .env                             # Secrets (MONGO_URI, JWT_SECRET, GOOGLE_CLIENT_ID)
+
+📂 Frontend Structure:
+frontend/src/
+├── App.jsx                          # Main routing setup
+├── main.jsx                         # Entry point
+├── context/AuthContext.jsx          # Auth state handling
+├── components/Navbar.jsx            # Login/logout toggle UI
+└── pages/
+    └── Dashboard.jsx                # Displays user info if logged in
+
+✅ Sample Output:
++--------------------------------------------------+
+| OAuth Demo                                       |
+| Welcome, Tushar 👋                               |
+| Email: tushar@gmail.com                         |
+| [Profile Image]                                  |
+| [Logout Button]                                  |
++--------------------------------------------------+
+
+📌 Run Instructions:
+
+🔹 Backend:
+1️⃣ Create `.env` file:
+2️⃣ `cd backend`  
+3️⃣ `npm install`  
+4️⃣ `npm run dev`  
+
+🔹 Frontend:
+1️⃣ `cd frontend`  
+2️⃣ Replace `YOUR_GOOGLE_CLIENT_ID` in `App.jsx`  
+3️⃣ `npm install`  
+4️⃣ `npm run dev`  
+
+📚 Teaching Tips:
+- Use Thunder Client to test `/google-login` route with a real Google ID token  
+- Explain OAuth flow and difference between OAuth and JWT  
+- Encourage inspecting LocalStorage and network token headers  

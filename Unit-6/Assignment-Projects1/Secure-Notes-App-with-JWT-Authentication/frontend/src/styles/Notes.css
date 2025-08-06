@@ -1,0 +1,97 @@
+/* === OUTER CONTAINER FOR NOTES SECTION === */
+.notes-container {
+  padding: 32px 0;
+  max-width: 800px;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* === SECTION HEADING === */
+.notes-container h2 {
+  text-align: left;
+  margin-bottom: 24px;
+  color: #2d2d2d; /* Dark gray for strong contrast */
+}
+
+/* === FORM WRAPPER FOR ADDING NOTES === */
+.notes-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 36px;
+  background: #f7f8fa; /* Soft off-white background */
+  padding: 32px 28px 24px 28px;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(100,108,255,0.07); /* Subtle indigo glow */
+  border: 1.5px solid #e0e0e0;
+}
+
+/* === TEXT INPUT FIELD === */
+.notes-form input {
+  padding: 12px 14px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(100,108,255,0.03);
+}
+
+/* === INPUT FOCUS STATE === */
+.notes-form input:focus {
+  border: 1.5px solid #646cff; /* Indigo border on focus */
+  outline: none;
+  box-shadow: 0 2px 8px rgba(100,108,255,0.10);
+}
+
+/* === TEXTAREA FOR NOTE BODY === */
+.notes-form textarea {
+  min-height: 120px;
+  max-height: 320px;
+  padding: 14px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  font-family: inherit;
+  background: #fff;
+  resize: vertical;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(100,108,255,0.03);
+}
+
+/* === TEXTAREA FOCUS STATE === */
+.notes-form textarea:focus {
+  border: 1.5px solid #646cff;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(100,108,255,0.10);
+}
+
+/* === SUBMIT BUTTON === */
+.notes-form button {
+  align-self: flex-end;
+  background: linear-gradient(90deg, #646cff 0%, #535bf2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(100,108,255,0.10);
+  margin-top: 8px;
+}
+
+/* === BUTTON HOVER EFFECT === */
+.notes-form button:hover {
+  background: linear-gradient(90deg, #535bf2 0%, #646cff 100%);
+  transform: translateY(-2px) scale(1.03); /* Slight lift */
+  box-shadow: 0 8px 24px rgba(100,108,255,0.18);
+}
+
+/* === LIST OF NOTES BELOW THE FORM === */
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}

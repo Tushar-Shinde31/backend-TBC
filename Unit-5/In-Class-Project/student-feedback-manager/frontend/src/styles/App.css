@@ -1,0 +1,63 @@
+/* App.css - Main application styles */
+
+/* Main container for the entire app, sets background and font */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header section at the top of the app */
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* Main title styling with gradient text */
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle under the main title */
+.app-subtitle {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Wrapper for the main content, adds card-like appearance */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .content-wrapper {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+  }
+} 

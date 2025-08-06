@@ -1,0 +1,95 @@
+📘 Project Name: Movie Recommendation Vault
+
+🔗 Local Preview: http://localhost:5173
+
+🔗 Backend API: http://localhost:5000/api
+
+🔗 Host Link: https://movie-recommendation-vault.vercel.app/
+
+🎯 Objective:
+Build a secure and dynamic movie recommendation platform where authenticated users (via Google OAuth) can add, vote, comment, and explore movie suggestions from others. This project demonstrates full-stack development with user authentication, protected routes, and dynamic UI.
+
+🧠 Concepts Covered (Unit 6 - Assignment Project A):
+▫ Google OAuth Authentication (Backend + Frontend)
+▫ JWT Token Handling & User Session
+▫ Full CRUD for Movie Recommendations
+▫ Protected Routes & Context-based Auth Management
+▫ Upvote/Downvote with User Tracking
+▫ Filtering & Sorting Data (by Genre, Popularity, Date)
+▫ Comment System with User Ownership
+▫ Backend API using Express & MongoDB
+▫ React Router + Context API + Axios for frontend integration
+
+🛠️ Features Implemented:
+▫ Google OAuth Login
+▫ Add New Movie (Protected Route)
+▫ View All Movies
+▫ Filter by Genre
+▫ Sort by Popularity or Date
+▫ Upvote / Downvote Movies (1 per user)
+▫ Comment on Movies
+▫ Edit/Delete Own Comments
+▫ Secure Routes with JWT Protection
+
+📂 Folder Structure (Frontend):
+
+src/
+│
+├── App.jsx
+├── main.jsx
+├── context/
+│   └── AuthContext.jsx
+├── components/
+│   ├── Navbar.jsx
+│   ├── MovieCard.jsx
+│   └── CommentSection.jsx
+├── pages/
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   └── AddMovie.jsx
+├── utils/
+│   └── api.js
+
+📦 Backend Highlights:
+▫ Routes: `/api/movies`, `/api/comments`, `/api/auth/google`
+▫ Controllers: Movie, Comment, Auth
+▫ Models: User, Movie, Comment
+▫ Middleware: JWT Token Checker
+▫ Google OAuth Callback and JWT Generation
+
+🔐 Authentication Flow:
+1️⃣ User clicks "Sign in with Google"
+2️⃣ Redirected to Google for login
+3️⃣ Backend handles OAuth and returns JWT
+4️⃣ JWT stored in localStorage and user context
+5️⃣ All protected requests include Bearer token in headers
+
+✅ Sample Output:
++--------------------------------------------------------+
+| 🎥 Title: Inception (2010)                             |
+| 🎭 Genre: Sci-Fi                                       |
+| 📝 "A brilliant concept executed with stunning visuals"|
+| 👍 12   👎 1                                            |
+| 💬 Comments (4): [User1: Amazing!]                     |
+| [Comment Input Box...]                                 |
++--------------------------------------------------------+
+
+📌 Run Instructions:
+
+🔹 Backend:
+1️⃣ Navigate to backend folder
+2️⃣ Create `.env` file with:
+    GOOGLE_CLIENT_ID=xxx
+    GOOGLE_CLIENT_SECRET=xxx
+    JWT_SECRET=your_secret
+    FRONTEND_URL=http://localhost:5173
+3️⃣ Run: `npm install`
+4️⃣ Start server: `npm run dev`
+
+🔹 Frontend:
+1️⃣ Navigate to frontend folder
+2️⃣ Run: `npm install`
+3️⃣ Start Vite: `npm run dev`
+4️⃣ Open: http://localhost:5173
+
+🎉 You're now ready to test login, add movies, vote, comment, and filter!

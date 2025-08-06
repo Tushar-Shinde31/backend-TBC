@@ -1,0 +1,93 @@
+/* === BASE PAGE BACKGROUND === */
+body {
+  background: linear-gradient(120deg, #a5b4fc 0%, #34d399 100%); /* Indigo to emerald fade */
+  min-height: 100vh;                                            /* Ensure full viewport height */
+}
+
+/* === SECTION HEADING STYLE === */
+.register-container h2 {
+  color: #fff;
+}
+
+/* === REGISTRATION FORM WRAPPER === */
+.register-container {
+  max-width: 400px;
+  margin: 48px auto;                                            /* Vertically spaced + centered */
+  padding: 32px 24px;
+  background: rgba(24,24,27,0.95);                              /* Deep charcoal with transparency */
+  border-radius: 16px;
+  text-align: center;
+  box-shadow:
+    0 8px 32px 0 rgba(52,211,153,0.18),                         /* Green glow */
+    0 1.5px 8px 0 rgba(165,180,252,0.10);                       /* Indigo accent */
+  transition: box-shadow 0.3s;
+}
+
+/* === HOVER STATE GLOW BUMP === */
+.register-container:hover {
+  box-shadow:
+    0 12px 40px 0 rgba(52,211,153,0.28),
+    0 2px 12px 0 rgba(165,180,252,0.18);
+}
+
+/* === LAYOUT FOR FORM ELEMENTS === */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;                                                    /* Space between inputs */
+}
+
+/* === TEXT INPUT STYLING === */
+.register-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.5px solid #34d399;                                  /* Soft green border */
+  background: #23232b;                                          /* Dark base for contrast */
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(52,211,153,0.08);                   /* Gentle inner glow */
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+/* === ON INPUT FOCUS === */
+.register-form input:focus {
+  border: 2px solid #a5b4fc;                                    /* Highlight with indigo */
+  background: #18181b;
+  box-shadow: 0 2px 8px rgba(165,180,252,0.12);                 /* Deeper focus glow */
+}
+
+/* === SUBMIT BUTTON === */
+.register-form button {
+  background: linear-gradient(90deg, #34d399, #a5b4fc);         /* Green to indigo gradient */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(52,211,153,0.10);
+  transition: background 0.2s, transform 0.1s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* === BUTTON PRESS SHRINK === */
+.register-form button:active {
+  transform: scale(0.97);
+}
+
+/* === ON HOVER: FLIP GRADIENT DIRECTION === */
+.register-form button:hover {
+  background: linear-gradient(90deg, #a5b4fc, #34d399);
+}
+
+/* === ERROR MESSAGE STYLE (e.g., for validation issues) === */
+.register-error {
+  color: #f87171;                                               /* Soft red tone */
+  margin-top: 12px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
