@@ -2,7 +2,7 @@
 
 🔗 Local Frontend: http://localhost:5173  
 🔗 Local Backend: http://localhost:5000/api/events
-🔗 Host Link: https://event-management-ivory-chi.vercel.app/
+🔗 Host Link: https://online-event-management-o4fo.onrender.com
 
 🎯 Objective:
 Build a full-stack event management system that handles events and their attendees using Express, MongoDB, and React. This project emphasizes nested data operations, advanced querying, filtering, and clean frontend state management.
@@ -79,3 +79,4 @@ frontend/
 - Teach how nested documents simplify related data storage
 - Compare frontend and backend sync through Axios calls
 - Explore edge cases like duplicate attendees or empty fields
+
