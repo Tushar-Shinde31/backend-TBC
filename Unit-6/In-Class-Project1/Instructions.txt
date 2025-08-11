@@ -2,7 +2,7 @@
 
 🔗 Local Backend: http://localhost:5000/api/auth  
 🔗 Local Frontend: http://localhost:5173
-🔗Host Link: https://simple-auth-system.vercel.app/
+🔗Host Link: https://simple-auth-system11.onrender.com
 
 🎯 Objective:
 Build a secure authentication system using JWT (JSON Web Token) that allows users to register, log in, and access protected resources. This project demonstrates backend security and frontend state management using React Context.
@@ -76,4 +76,5 @@ frontend/src/
 📚 Tips for Teachers:
 - Highlight password hashing vs plain storage
 - Demonstrate how Context API enables secure session flow
+
 - Compare protected vs unprotected endpoints
