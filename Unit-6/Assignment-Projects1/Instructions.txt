@@ -2,7 +2,7 @@
 
 🔗 Local Backend: http://localhost:5000
 🔗 Local Frontend: http://localhost:5173
-🔗 Host Link: https://secure-notes-app-with-jwt-authentic.vercel.app/login
+🔗 Host Link: https://secure-notes-app-with-jwt-authentication.onrender.com
 
 🎯 Objective:
 Build a secure full-stack application where users can register, log in, and manage their personal notes. The app uses JWT for authentication and allows full CRUD operations on notes.
@@ -93,3 +93,4 @@ frontend/
 • Use `AuthContext` to control login/logout state
 • Logout clears localStorage and redirects to login
 • User can only access their own notes
+
