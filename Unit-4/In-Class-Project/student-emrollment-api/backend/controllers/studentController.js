@@ -1,4 +1,4 @@
-const Student = require("../models/student");
+const Student = require("../models/Student.js");
 
 // Controller to add a new student to the database
 exports.addStudent = async (req, res) => {

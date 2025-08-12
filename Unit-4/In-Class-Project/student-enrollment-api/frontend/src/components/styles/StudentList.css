@@ -1,7 +1,0 @@
-.student-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin: 0 auto;
-  max-width: 600px;
-} 

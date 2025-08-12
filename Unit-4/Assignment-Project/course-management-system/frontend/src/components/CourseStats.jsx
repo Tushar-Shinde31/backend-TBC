@@ -28,16 +28,17 @@ const CourseStats = () => {
   // Render the stats UI
   return (
     <div className="course-stats">
-      {/* Title for the stats section */}
-      <h3>📊 Courses by Category</h3>
-      {/* List of categories and their course counts */}
-      <ul>
+      <h3>📊 Course Statistics</h3>
+      <div className="stats-grid">
         {stats.map(item => (
-          <li key={item._id}>
-          {item._id.charAt(0).toUpperCase() + item._id.slice(1)}: {item.count}
-        </li>        
+          <div key={item._id} className="stat-item">
+            <div className="stat-category">
+              {item._id.charAt(0).toUpperCase() + item._id.slice(1)}
+            </div>
+            <div className="stat-count">{item.count}</div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

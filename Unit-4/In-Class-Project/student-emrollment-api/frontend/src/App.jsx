@@ -43,17 +43,18 @@ function App() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>📘 Student Enrollment</h1>
+    <div className="container">
+      <header className="app-header">
+        <h1 className="app-title">Student Enrollment</h1>
+        <p className="app-subtitle">Create, update and manage enrolled students with ease.</p>
+      </header>
 
-      {/* Form for adding or editing a student */}
       <StudentForm
         onSubmit={selected ? handleUpdate : handleAdd}
         selected={selected}
         setSelected={setSelected}
       />
 
-      {/* List of students with edit/delete handlers */}
       <StudentList
         students={students}
         onEdit={setSelected}

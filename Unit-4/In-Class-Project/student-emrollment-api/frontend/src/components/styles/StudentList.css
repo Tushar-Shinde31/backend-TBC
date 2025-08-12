@@ -1,0 +1,15 @@
+/* Container for the list of students */
+.student-list {
+  display: grid; /* Use CSS grid layout */
+  grid-template-columns: 1fr; /* Single column by default */
+  gap: 16px; /* Space between student items */
+  margin: 0 auto; /* Center the list horizontally */
+  max-width: 860px; /* Limit the maximum width of the list */
+}
+
+/* Responsive: Show two columns on wider screens */
+@media (min-width: 720px) {
+  .student-list {
+    grid-template-columns: 1fr 1fr; /* Two columns for student items */
+  }
+}

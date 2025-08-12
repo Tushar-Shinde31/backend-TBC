@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -42,18 +42,76 @@
 }
 
 .app-container {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 32px 24px;
-  background: #f4f6fb;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(100,108,255,0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%);
 }
 
 .app-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 24px;
-  color: #646cff;
-  letter-spacing: 1px;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.app-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* Responsive design for app container */
+@media (max-width: 768px) {
+  .app-container {
+    margin: 10px;
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+  
+  .app-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 25px 15px;
+    border-radius: 16px;
+  }
+  
+  .app-container h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
 }

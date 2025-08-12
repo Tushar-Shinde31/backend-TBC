@@ -11,32 +11,48 @@ const Filters = ({ filters, setFilters }) => {
   // Render the filter UI
   return (
     <div className="filters">
-      {/* Search by course title */}
-      <input
-        name="search"
-        placeholder="Search by title"
-        value={filters.search}
-        onChange={handleChange}
-      />
-      {/* Filter by instructor */}
-      <input
-        name="instructor"
-        placeholder="Filter by instructor"
-        value={filters.instructor}
-        onChange={handleChange}
-      />
-      {/* Filter by category */}
-      <input
-        name="category"
-        placeholder="Filter by category"
-        value={filters.category}
-        onChange={handleChange}
-      />
-      {/* Sort order dropdown */}
-      <select name="sort" value={filters.sort} onChange={handleChange}>
-        <option value="-createdAt">Newest First</option>
-        <option value="createdAt">Oldest First</option>
-      </select>
+      <h3>🔍 Search & Filter Courses</h3>
+      
+      <div className="filter-group search-group">
+        <label htmlFor="search">Search by Title</label>
+        <input
+          id="search"
+          name="search"
+          placeholder="Search courses..."
+          value={filters.search}
+          onChange={handleChange}
+        />
+      </div>
+      
+      <div className="filter-group">
+        <label htmlFor="instructor">Filter by Instructor</label>
+        <input
+          id="instructor"
+          name="instructor"
+          placeholder="Enter instructor name"
+          value={filters.instructor}
+          onChange={handleChange}
+        />
+      </div>
+      
+      <div className="filter-group">
+        <label htmlFor="category">Filter by Category</label>
+        <input
+          id="category"
+          name="category"
+          placeholder="Enter category"
+          value={filters.category}
+          onChange={handleChange}
+        />
+      </div>
+      
+      <div className="filter-group">
+        <label htmlFor="sort">Sort Order</label>
+        <select id="sort" name="sort" value={filters.sort} onChange={handleChange}>
+          <option value="-createdAt">🆕 Newest First</option>
+          <option value="createdAt">📅 Oldest First</option>
+        </select>
+      </div>
     </div>
   );
 };

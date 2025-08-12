@@ -2,7 +2,7 @@
 
 🔗 Local Frontend: http://localhost:5173  
 🔗 Local Backend: http://localhost:5000/api/courses
-🔗 Host Link: https://course-manager-frontend.onrender.com/
+🔗 Host Link: https://course-manager-536h.onrender.com/
 
 🎯 Objective:
 Build a full-stack application to manage educational courses. This project teaches students how to integrate a MongoDB-backed REST API with a React frontend, including advanced query features like filtering, searching, sorting, pagination, and aggregation.

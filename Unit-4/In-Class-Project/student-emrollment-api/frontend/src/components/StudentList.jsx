@@ -7,7 +7,7 @@ import "../components/styles/StudentItem.css";
 // StudentList displays a list of students and handles edit/delete actions
 const StudentList = ({ students, onEdit, onDelete }) => {
   // If there are no students, show a message
-  if (!students.length) return <p>No students found.</p>;
+  if (!students.length) return <div className="card empty-state">No students found.</div>;
 
   return (
     // Render each student using the StudentItem component

@@ -1,0 +1,83 @@
+.student-form {
+  padding: 20px; /* Space inside the form */
+  margin: 0 auto 28px; /* Center form horizontally, add bottom margin */
+  background: #fff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.08); /* Subtle shadow */
+  max-width: 600px; /* Limit form width */
+}
+
+/* Grid layout for form fields */
+.form-grid {
+  display: grid; /* Use CSS grid */
+  grid-template-columns: 1fr; /* Single column by default */
+  gap: 14px; /* Space between grid items */
+}
+
+/* Individual field styling */
+.field {
+  display: flex; /* Use flexbox for label/input */
+  flex-direction: column; /* Stack label and input vertically */
+  gap: 4px; /* Space between label and input */
+}
+
+/* Label styling */
+.label {
+  font-size: 0.9rem; /* Slightly smaller font */
+  color: var(--muted); /* Use muted color variable */
+  font-weight: 500; /* Medium font weight */
+}
+
+/* Input field styling */
+.field input {
+  padding: 8px 10px; /* Space inside input */
+  border: 1px solid var(--border); /* Border using variable */
+  border-radius: 4px; /* Rounded input corners */
+  font-size: 1rem; /* Standard font size */
+}
+
+/* Row for form buttons */
+.button-row {
+  display: flex; /* Use flexbox for buttons */
+  gap: 12px; /* Space between buttons */
+  justify-content: center;  /* Center the buttons horizontally */
+  margin-top: 20px; /* Space above buttons */
+}
+
+/* Base button styling */
+.btn {
+  padding: 8px 16px; /* Space inside button */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 0.95rem; /* Slightly smaller font */
+  cursor: pointer; /* Pointer cursor on hover */
+  border: none; /* Remove default border */
+}
+
+/* Primary button (e.g., submit) */
+.btn-primary {
+  background-color: #2563eb; /* Blue background */
+  color: white; /* White text */
+}
+
+/* Primary button hover effect */
+.btn-primary:hover {
+  background-color: #1e40af; /* Darker blue on hover */
+}
+
+/* Secondary button (e.g., cancel) */
+.btn-secondary {
+  background-color: #e5e7eb; /* Light gray background */
+  color: #374151; /* Dark gray text */
+}
+
+/* Secondary button hover effect */
+.btn-secondary:hover {
+  background-color: #d1d5db; /* Slightly darker gray on hover */
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 640px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on wider screens */
+  }
+}

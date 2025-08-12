@@ -34,17 +34,66 @@ const CourseForm = ({ selected, onSubmit, cancelEdit }) => {
 
   return (
     <form onSubmit={handleSubmit} className="course-form">
-      {/* Input fields for each course attribute */}
-      <input name="title" placeholder="Title" value={form.title} onChange={handleChange} />
-      <input name="category" placeholder="Category" value={form.category} onChange={handleChange} />
-      <input name="instructor" placeholder="Instructor" value={form.instructor} onChange={handleChange} />
-      <input name="description" placeholder="Description" value={form.description} onChange={handleChange} />
+      <h3>{selected ? "✏️ Edit Course" : "➕ Add New Course"}</h3>
       
-      {/* Submit button changes text based on mode */}
-      <button type="submit">{selected ? "Update" : "Add"}</button>
-
-      {/* Show cancel button only in edit mode */}
-      {selected && <button onClick={cancelEdit}>Cancel</button>}
+      <div className="form-group">
+        <label htmlFor="title">Course Title</label>
+        <input 
+          id="title"
+          name="title" 
+          placeholder="Enter course title" 
+          value={form.title} 
+          onChange={handleChange}
+          required
+        />
+      </div>
+      
+      <div className="form-group">
+        <label htmlFor="category">Category</label>
+        <input 
+          id="category"
+          name="category" 
+          placeholder="e.g., Programming, Design, Business" 
+          value={form.category} 
+          onChange={handleChange}
+          required
+        />
+      </div>
+      
+      <div className="form-group">
+        <label htmlFor="instructor">Instructor</label>
+        <input 
+          id="instructor"
+          name="instructor" 
+          placeholder="Enter instructor name" 
+          value={form.instructor} 
+          onChange={handleChange}
+          required
+        />
+      </div>
+      
+      <div className="form-group full-width">
+        <label htmlFor="description">Description</label>
+        <textarea 
+          id="description"
+          name="description" 
+          placeholder="Enter course description..." 
+          value={form.description} 
+          onChange={handleChange}
+          required
+        />
+      </div>
+      
+      <div className="button-group">
+        <button type="submit">
+          {selected ? "🔄 Update Course" : "➕ Add Course"}
+        </button>
+        {selected && (
+          <button type="button" onClick={cancelEdit}>
+            ❌ Cancel
+          </button>
+        )}
+      </div>
     </form>
   );
 };

@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>📚 Course Manager</h1>
+      <h1>Course Manager</h1>
 
       {/* Form for adding or updating a course */}
       <CourseForm

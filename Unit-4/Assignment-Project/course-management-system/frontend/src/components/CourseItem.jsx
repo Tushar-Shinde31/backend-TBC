@@ -6,15 +6,33 @@ const CourseItem = ({ course, onEdit, onDelete }) => (
   <div className="course-item">
     {/* Course title */}
     <h3>{course.title}</h3>
-    {/* Instructor name */}
-    <p><strong>Instructor:</strong> {course.instructor}</p>
-    {/* Course category */}
-    <p><strong>Category:</strong> {course.category}</p>
+    
+    {/* Course metadata */}
+    <div className="course-meta">
+      <div className="meta-item">
+        <span>👨‍🏫</span>
+        <strong>Instructor:</strong> {course.instructor}
+      </div>
+      <div className="meta-item">
+        <span>📚</span>
+        <strong>Category:</strong> {course.category}
+      </div>
+    </div>
+    
     {/* Course description */}
-    <p>{course.description}</p>
-    {/* Edit and Delete buttons */}
-    <button onClick={() => onEdit(course)}>Edit</button>
-    <button onClick={() => onDelete(course._id)}>Delete</button>
+    <div className="course-description">
+      {course.description}
+    </div>
+    
+    {/* Action buttons */}
+    <div className="course-actions">
+      <button className="edit-btn" onClick={() => onEdit(course)}>
+        ✏️ Edit
+      </button>
+      <button className="delete-btn" onClick={() => onDelete(course._id)}>
+        🗑️ Delete
+      </button>
+    </div>
   </div>
 );
 

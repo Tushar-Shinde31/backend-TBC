@@ -2,7 +2,7 @@
 
 🔗 Local Frontend: http://localhost:5173  
 🔗 Local Backend: http://localhost:5000/api/students
-🔗 Host Link : https://student11-1-frontend.onrender.com/
+🔗 Host Link : https://student-enrollment-59mc.onrender.com/
 
 🎯 Objective:
 Build a full-stack web application to manage student records. This project teaches students how to implement backend CRUD operations with MongoDB, and connect them with a basic React frontend for visual interaction.
