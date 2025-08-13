@@ -2,7 +2,7 @@
 
 🔗 Local Frontend: http://localhost:5173  
 🔗 Local Backend: http://localhost:5000/api/auth/google-login
-🔗 Host Link:  https://secure-notes-app-with-jwt-authentication.onrender.com
+🔗 Host Link:  https://google-oauth-authentication-system11.onrender.com
 
 🎯 Objective:
 Build an authentication system using Google OAuth 2.0 and JSON Web Tokens (JWT), enabling users to log in with their Google account and securely access a protected dashboard.
@@ -70,3 +70,4 @@ frontend/src/
 - Explain OAuth flow and difference between OAuth and JWT  
 
 - Encourage inspecting LocalStorage and network token headers  
+
