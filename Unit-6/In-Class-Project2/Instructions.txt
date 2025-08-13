@@ -2,7 +2,7 @@
 
 🔗 Local Frontend: http://localhost:5173  
 🔗 Local Backend: http://localhost:5000/api/auth/google-login
-🔗 Host Link: https://google-o-auth-authentication-system.vercel.app/
+🔗 Host Link:  https://secure-notes-app-with-jwt-authentication.onrender.com
 
 🎯 Objective:
 Build an authentication system using Google OAuth 2.0 and JSON Web Tokens (JWT), enabling users to log in with their Google account and securely access a protected dashboard.
@@ -68,4 +68,5 @@ frontend/src/
 📚 Teaching Tips:
 - Use Thunder Client to test `/google-login` route with a real Google ID token  
 - Explain OAuth flow and difference between OAuth and JWT  
+
 - Encourage inspecting LocalStorage and network token headers  
